@@ -7,6 +7,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -19,21 +22,41 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            Fragment selectedFragment = null;
+
             switch (item.getItemId()) {
                 case R.id.navigation_today:
+
+                    selectedFragment = new TodayWeather();
+
                     Toast toast1 = Toast.makeText(getApplicationContext(), "Today's wather", Toast.LENGTH_LONG);
                     toast1.show();
-                    return true;
+                    break;
+
                 case R.id.navigation_week:
+
+                    selectedFragment = new WeekForecast();
+
                     Toast toast2 = Toast.makeText(getApplicationContext(), "Week's forecast", Toast.LENGTH_LONG);
                     toast2.show();
-                    return true;
+                    break;
+
                 case R.id.navigation_map:
+
+                    selectedFragment = new WeatherMap();
+
                     Toast toast3 = Toast.makeText(getApplicationContext(), "Weather Map", Toast.LENGTH_LONG);
                     toast3.show();
-                    return true;
+                    break;
             }
-            return false;
+
+
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_back_stack_frame_layout, selectedFragment);
+            fragmentTransaction.commit();
+
+            return true;
         }
     };
 
@@ -45,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        LottieAnimationView animationView = findViewById(R.id.today_weather_animation);
-        animationView.setAnimation("weather_partly_cloudy.json");
-        animationView.playAnimation();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_back_stack_frame_layout,
+                new TodayWeather()).commit();
+
 
     }
 
