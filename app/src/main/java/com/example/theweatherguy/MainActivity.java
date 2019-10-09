@@ -2,14 +2,13 @@ package com.example.theweatherguy;
 
 import android.os.Bundle;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        LottieAnimationView animationView = findViewById(R.id.today_weather_animation);
+        animationView.setAnimation("weather_partly_cloudy.json");
+        animationView.playAnimation();
 
     }
 
