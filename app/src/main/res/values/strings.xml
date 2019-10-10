@@ -40,4 +40,16 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="under_construction">This functionality is currently under development</string>
+    <string name="profile">Profile</string>
+    <string name="today_weather">Today\'s Weather</string>
+    <string name="week_s_forecast">Week\'s Forecast</string>
+    <string name="weather_map">Weather Map</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="log_out">Log Out</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="nav_header_subtitle1">Weather Information, at the palm of your hands</string>
+    <string name="nav_header_subtitle2">An app by Federico Brun</string>
+
 </resources>
