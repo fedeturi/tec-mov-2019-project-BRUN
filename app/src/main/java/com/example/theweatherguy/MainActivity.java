@@ -67,50 +67,49 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_profile:
-                //fragmentTransaction.replace(R.id.fragment_container, new TodayWeather());
-                Toast message = Toast.makeText(this, "Profile", Toast.LENGTH_SHORT);
-                message.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
             case R.id.nav_today:
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new TodayWeather());
                 fragmentTransaction.commit();
-                Toast message2 = Toast.makeText(this, "Today", Toast.LENGTH_SHORT);
-                message2.show();
                 break;
             case R.id.nav_week:
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new WeekForecast());
                 fragmentTransaction.commit();
-                Toast message3 = Toast.makeText(this, "Week", Toast.LENGTH_SHORT);
-                message3.show();
                 break;
             case R.id.nav_map:
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new WeatherMap());
                 fragmentTransaction.commit();
-                Toast message4 = Toast.makeText(this, "Map", Toast.LENGTH_SHORT);
-                message4.show();
                 break;
             case R.id.nav_settings:
-                Toast message5 = Toast.makeText(this, "Settings", Toast.LENGTH_SHORT);
-                message5.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
             case R.id.nav_about:
-                Toast message6 = Toast.makeText(this, "About", Toast.LENGTH_SHORT);
-                message6.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
             case R.id.nav_logout:
-                Toast message7 = Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT);
-                message7.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
             case R.id.nav_share:
-                Toast message8 = Toast.makeText(this, "Share", Toast.LENGTH_SHORT);
-                message8.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
             case R.id.nav_send:
-                Toast message9 = Toast.makeText(this, "Send", Toast.LENGTH_SHORT);
-                message9.show();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.commit();
                 break;
         }
 
