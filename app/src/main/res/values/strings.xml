@@ -51,5 +51,9 @@
     <string name="send">Send</string>
     <string name="nav_header_subtitle1">Weather Information, at the palm of your hands</string>
     <string name="nav_header_subtitle2">An app by Federico Brun</string>
+    <string name="today_weather_text_description">Partly Cloudy</string>
+    <string name="today_temperature_textview">28º</string>
+    <string name="list_item_day_text">Monday</string>
+    <string name="list_item_text_two">Partly Cloudy</string>
 
 </resources>
