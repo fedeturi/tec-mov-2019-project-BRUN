@@ -38,7 +38,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_send">Message Developing Team</string>
     <string name="under_construction">This functionality is currently under development</string>
     <string name="profile">Profile</string>
     <string name="today_weather">Today\'s Weather</string>
@@ -48,12 +48,23 @@
     <string name="about">About</string>
     <string name="log_out">Log Out</string>
     <string name="share">Share</string>
-    <string name="send">Send</string>
+    <string name="send">Message Developing Team</string>
     <string name="nav_header_subtitle1">Weather Information, at the palm of your hands</string>
     <string name="nav_header_subtitle2">An app by Federico Brun</string>
     <string name="today_weather_text_description">Partly Cloudy</string>
     <string name="today_temperature_textview">28º</string>
     <string name="list_item_day_text">Monday</string>
     <string name="list_item_text_two">Partly Cloudy</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="login">Login</string>
 
 </resources>

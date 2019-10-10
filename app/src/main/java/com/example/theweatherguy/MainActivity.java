@@ -1,5 +1,6 @@
 package com.example.theweatherguy;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
@@ -16,11 +17,22 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+
+    private void sendMail() {
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, "fedejbrun@gmail.com");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "The Weather Guy User Feedback ");
+        intent.putExtra(Intent.EXTRA_TEXT, "Hi! I'am loving your App!");
+
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, "Choose an email client"));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +109,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_logout:
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
-                fragmentTransaction.commit();
+                Intent intent = new Intent(MainActivity.this, LogIn.class);
+                startActivity(intent);
                 break;
             case R.id.nav_share:
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -107,13 +118,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_send:
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
-                fragmentTransaction.commit();
+                sendMail();
                 break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
