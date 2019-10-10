@@ -1,11 +1,13 @@
 package com.example.theweatherguy;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
@@ -109,8 +111,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_logout:
-                Intent intent = new Intent(MainActivity.this, LogIn.class);
-                startActivity(intent);
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        MainActivity.this);
+
+                // set title
+                alertDialogBuilder.setTitle("The Weather Guy");
+
+                // set dialog message
+                alertDialogBuilder
+                        .setMessage("It was good to have you here!")
+                        .setCancelable(false)
+                        .setPositiveButton("Bye",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, close
+                                // current activity
+                                MainActivity.this.finish();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+
+
+
                 break;
             case R.id.nav_share:
                 fragmentTransaction = fragmentManager.beginTransaction();

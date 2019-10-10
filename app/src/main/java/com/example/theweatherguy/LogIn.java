@@ -11,8 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LogIn extends AppCompatActivity {
 
-    private Button button ;
-    private ProgressBar progress;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,34 +19,21 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         button = findViewById(R.id.login_button);
-        progress = findViewById(R.id.loading);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                progress.setVisibility(View.VISIBLE);
-
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        progress.setVisibility(View.VISIBLE);
-                                            }
-                }, 5000);
-
-
-
-                openActivity2();
+                openActivity();
             }
+
         });
     }
 
-    public void openActivity2() {
+    public void openActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
 
 
 }

@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/list_item_animation2"
-            android:text="@string/list_item_day_text"
+            android:text="Tuesday"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/list_item_animation3"
-            android:text="@string/list_item_day_text"
+            android:text="Wednesday"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -132,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/list_item_animation4"
-            android:text="@string/list_item_day_text"
+            android:text="Thursday"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -167,7 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/list_item_animation5"
-            android:text="@string/list_item_day_text"
+            android:text="Friday"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -202,7 +202,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/list_item_animation6"
-            android:text="@string/list_item_day_text"
+            android:text="Saturday"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -214,6 +214,41 @@
             android:layout_below="@+id/list_item_title6"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/list_item_animation6"
+            android:text="@string/list_item_text_two"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:id="@+id/list_item_animation7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_today_black_24dp" />
+
+        <TextView
+            android:id="@+id/list_item_title7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/list_item_animation7"
+            android:text="Sunday"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_item_subtitle7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_item_title7"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/list_item_animation7"
             android:text="@string/list_item_text_two"
             android:textSize="15sp" />
 
