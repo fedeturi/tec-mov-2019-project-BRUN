@@ -9,9 +9,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
-public class WeatherMap extends Fragment {
+public class UnderConstruction extends Fragment {
     //private Activity activity = getActivity();
 
     @Nullable
@@ -20,6 +21,9 @@ public class WeatherMap extends Fragment {
 
         Toast toast = Toast.makeText(getActivity(),getString(R.string.under_construction),Toast.LENGTH_SHORT);
         toast.show();
-        return inflater.inflate(R.layout.fragment_weather_map, container, false);
+
+        return inflater.inflate(R.layout.fragment_under_construction, container, false);
+
+
     }
 }
