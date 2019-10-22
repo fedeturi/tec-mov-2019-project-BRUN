@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="developer_mail">fedejbrun@gmail.com</string>
+    <string name="mail_subject">The Weather Guy User Feedback</string>
+    <string name="mail_body">Hi! I\'m loving your App!</string>
+    <string name="choose_email_client">Choose an email client</string>
+    <string name="there_is_no_email_client">There is no email client installed.</string>
+</resources>
