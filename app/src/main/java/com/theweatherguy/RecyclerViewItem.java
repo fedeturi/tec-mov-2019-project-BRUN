@@ -1,4 +1,4 @@
-package com.example.theweatherguy;
+package com.theweatherguy;
 
 public class RecyclerViewItem {
     private int mAnimation;

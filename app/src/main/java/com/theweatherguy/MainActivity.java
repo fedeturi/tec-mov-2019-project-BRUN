@@ -1,9 +1,10 @@
-package com.example.theweatherguy;
+package com.theweatherguy;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.theweatherguy.R;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -17,7 +18,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
