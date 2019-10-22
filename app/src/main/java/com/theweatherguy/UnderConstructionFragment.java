@@ -12,13 +12,18 @@ import androidx.fragment.app.Fragment;
 
 import com.example.theweatherguy.R;
 
-public class TodayWeather extends Fragment {
+public class UnderConstructionFragment extends Fragment {
+    //private Activity activity = getActivity();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         Toast toast = Toast.makeText(getActivity(),getString(R.string.under_construction),Toast.LENGTH_SHORT);
         toast.show();
-        return inflater.inflate(R.layout.fragment_today_weather, container, false);
+
+        return inflater.inflate(R.layout.fragment_under_construction, container, false);
+
+
     }
 }

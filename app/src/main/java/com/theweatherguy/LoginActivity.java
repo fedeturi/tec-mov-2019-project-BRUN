@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.theweatherguy.R;
 
-public class LogIn extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private Button button;
 

@@ -3,23 +3,21 @@ package com.theweatherguy;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.example.theweatherguy.R;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
-import android.view.MenuItem;
-import android.widget.Toast;
+import com.example.theweatherguy.R;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            fragmentTransaction.replace(R.id.fragment_container, new TodayWeather());
+            fragmentTransaction.replace(R.id.fragment_container, new TodayWeatherFragment());
             fragmentTransaction.commit();
 
             navigationView.setCheckedItem(R.id.nav_today);
@@ -90,32 +88,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.nav_profile:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_today:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new TodayWeather());
+                fragmentTransaction.replace(R.id.fragment_container, new TodayWeatherFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_week:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new WeekForecast());
+                fragmentTransaction.replace(R.id.fragment_container, new WeekForecastFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_map:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new WeatherMap());
+                fragmentTransaction.replace(R.id.fragment_container, new WeatherMapFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_settings:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_about:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_logout:
@@ -149,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_share:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstruction());
+                fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_send:

@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.theweatherguy.R;
 
-public class WeekForecast extends Fragment {
+public class WeekForecastFragment extends Fragment {
 
     /*
     private RecyclerView.LayoutManager mRecyclerView;

@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.theweatherguy.R;
 
-public class WeatherMap extends Fragment {
+public class WeatherMapFragment extends Fragment {
     //private Activity activity = getActivity();
 
     @Nullable
