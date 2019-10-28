@@ -107,9 +107,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_settings:
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                /*
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
-                fragmentTransaction.commit();
+                fragmentTransaction.commit();*/
                 break;
             case R.id.nav_about:
                 fragmentTransaction = fragmentManager.beginTransaction();

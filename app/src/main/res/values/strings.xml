@@ -71,5 +71,11 @@
     <string name="mail_body">Hi! I\'m loving your App!</string>
     <string name="choose_email_client">Choose an email client</string>
     <string name="there_is_no_email_client">There is no email client installed.</string>
-
+    <string name="your_profile">Your profile</string>
+    <string name="usage_preferences">Usage preferences</string>
+    <string name="profile_name">Username</string>
+    <string name="units_preferences">Units</string>
+    <string name="show_animations">Show animations</string>
+    <string name="show_animations_on">Shows weather condition animations. Default behaviour, enhanced User Experience.</string>
+    <string name="show_animations_off">Shows weather condition images.</string>
 </resources>
