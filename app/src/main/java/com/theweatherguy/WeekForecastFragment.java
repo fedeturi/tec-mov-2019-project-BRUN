@@ -4,46 +4,50 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.theweatherguy.R;
 
+import java.util.ArrayList;
+
 public class WeekForecastFragment extends Fragment {
 
-    /*
-    private RecyclerView.LayoutManager mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    */
 
-    /*TODO CHange to Recycler View
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        ArrayList<RecyclerViewItem> exampleList = new ArrayList<>();
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Monday", "33º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Tuesday", "30º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Wednesday", "30º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Thursday", "27º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Friday", "33º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Saturday", "30º"));
-        exampleList.add(new RecyclerViewItem(R.drawable.ic_today_black_24dp, "Sunday", "27º"));
-
-        mRecyclerView = getView().findViewById(R.id.recyclerView);
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mAdapter = new Adapter(exampleList);
-    }*/
+    private ArrayList<WeekDay> weekDaysList;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast toast = Toast.makeText(getActivity(),getString(R.string.under_construction),Toast.LENGTH_SHORT);
-        toast.show();
-        return inflater.inflate(R.layout.fragment_week_forecast, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_week_forecast, container, false);
+        initWeekDaysList();
+        RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view_week_list);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.setAdapter(new ListAdapter(weekDaysList));
+
+        recyclerView.addItemDecoration(new DividerItemDecoration(this.getContext(), DividerItemDecoration.VERTICAL));
+
+
+        return rootView;
     }
+
+
+    private void initWeekDaysList() {
+        weekDaysList = new ArrayList<>();
+
+        weekDaysList.add(new WeekDay("Monday", "Sunny", 30, 24));
+        weekDaysList.add(new WeekDay("Tuesday", "Sunny", 31, 29));
+        weekDaysList.add(new WeekDay("Wednesday", "Cloudy", 28, 23));
+        weekDaysList.add(new WeekDay("Thursday", "Sunny", 29, 26));
+        weekDaysList.add(new WeekDay("Friday", "Partly Cloudy", 29, 27));
+        weekDaysList.add(new WeekDay("Saturday", "Sunny", 31, 19));
+        weekDaysList.add(new WeekDay("Sunday", "Rainy", 30, 25));
+    }
+
 }

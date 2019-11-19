@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.nav_profile:
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new UnderConstructionFragment());
+                fragmentTransaction.replace(R.id.fragment_container, new ProfileFragment());
                 fragmentTransaction.commit();
                 break;
             case R.id.nav_today:
