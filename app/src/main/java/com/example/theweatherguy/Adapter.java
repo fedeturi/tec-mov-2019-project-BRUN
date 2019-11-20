@@ -15,13 +15,19 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
+
+    public Adapter(ArrayList<RecyclerViewItem> listOfDays) {
+        arrayListOfItems = listOfDays;
+
+    }
+
     private ArrayList<RecyclerViewItem> arrayListOfItems;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView imageViewCompat;
-        public TextView textViewCompat1;
-        public TextView textViewCompat2;
+        ImageView imageViewCompat;
+        TextView textViewCompat1;
+        TextView textViewCompat2;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -32,19 +38,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
     }
 
-    public Adapter(ArrayList<RecyclerViewItem> listOfDays) {
-        arrayListOfItems = listOfDays;
-
-    }
-
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item,
                 parent, false);
-        ViewHolder vHolder = new ViewHolder(v);
-        return vHolder;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -61,7 +61,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-
         return arrayListOfItems.size();
     }
 }
