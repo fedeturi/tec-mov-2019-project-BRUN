@@ -88,4 +88,8 @@
     <string name="weather_description">Sunny</string>
     <string name="change">Change</string>
     <string name="profile_username">Username</string>
+
+    <string name="set">Set</string>
+
+    <string name="cancel">Cancel</string>
 </resources>

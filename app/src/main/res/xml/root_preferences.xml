@@ -32,6 +32,7 @@
             app:summaryOn="@string/show_animations_on"
             app:title="@string/show_animations" />
 
+
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
