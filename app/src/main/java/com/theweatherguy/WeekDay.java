@@ -2,16 +2,30 @@ package com.theweatherguy;
 
 public class WeekDay {
 
+    private int dayAnimation;
     private String dayName;
     private String dayCondition;
-    private int maxTemp;
-    private int minTemp;
+    private String dayMaxValue;
+    private String dayMaxValueUnits;
+    private String dayMinValue;
+    private String dayMinValueUnits;
 
-    public WeekDay(String dayName, String dayCondition, int maxTemp, int minTemp) {
+    public WeekDay(int dayAnimation, String dayName, String dayCondition, String dayMaxValue, String dayMaxValueUnits, String dayMinValue, String dayMinValueUnits) {
+        this.dayAnimation = dayAnimation;
         this.dayName = dayName;
         this.dayCondition = dayCondition;
-        this.maxTemp = maxTemp;
-        this.minTemp = minTemp;
+        this.dayMaxValue = dayMaxValue;
+        this.dayMaxValueUnits = dayMaxValueUnits;
+        this.dayMinValue = dayMinValue;
+        this.dayMinValueUnits = dayMinValueUnits;
+    }
+
+    public int getDayAnimation() {
+        return dayAnimation;
+    }
+
+    public void setDayAnimation(int dayAnimation) {
+        this.dayAnimation = dayAnimation;
     }
 
     public String getDayName() {
@@ -30,19 +44,35 @@ public class WeekDay {
         this.dayCondition = dayCondition;
     }
 
-    public int getMaxTemp() {
-        return maxTemp;
+    public String getDayMaxValue() {
+        return dayMaxValue;
     }
 
-    public void setMaxTemp(int maxTemp) {
-        this.maxTemp = maxTemp;
+    public void setDayMaxValue(String dayMaxValue) {
+        this.dayMaxValue = dayMaxValue;
     }
 
-    public int getMinTemp() {
-        return minTemp;
+    public String getDayMaxValueUnits() {
+        return dayMaxValueUnits;
     }
 
-    public void setMinTemp(int minTemp) {
-        this.minTemp = minTemp;
+    public void setDayMaxValueUnits(String dayMaxValueUnits) {
+        this.dayMaxValueUnits = dayMaxValueUnits;
+    }
+
+    public String getDayMinValue() {
+        return dayMinValue;
+    }
+
+    public void setDayMinValue(String dayMinValue) {
+        this.dayMinValue = dayMinValue;
+    }
+
+    public String getDayMinValueUnits() {
+        return dayMinValueUnits;
+    }
+
+    public void setDayMinValueUnits(String dayMinValueUnits) {
+        this.dayMinValueUnits = dayMinValueUnits;
     }
 }

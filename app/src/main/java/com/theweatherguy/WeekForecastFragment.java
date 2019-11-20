@@ -41,13 +41,17 @@ public class WeekForecastFragment extends Fragment {
     private void initWeekDaysList() {
         weekDaysList = new ArrayList<>();
 
-        weekDaysList.add(new WeekDay("Monday", "Sunny", 30, 24));
-        weekDaysList.add(new WeekDay("Tuesday", "Sunny", 31, 29));
-        weekDaysList.add(new WeekDay("Wednesday", "Cloudy", 28, 23));
-        weekDaysList.add(new WeekDay("Thursday", "Sunny", 29, 26));
-        weekDaysList.add(new WeekDay("Friday", "Partly Cloudy", 29, 27));
-        weekDaysList.add(new WeekDay("Saturday", "Sunny", 31, 19));
-        weekDaysList.add(new WeekDay("Sunday", "Rainy", 30, 25));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+        weekDaysList.add(new WeekDay(R.drawable.ic_today_black_24dp, "Monday", "Sunny", "30", "ºC", "24", "ºC"));
+
+
     }
 
 }
