@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.theweatherguy.R;
-
 import java.util.ArrayList;
 
 public class WeekForecastFragment extends Fragment {
