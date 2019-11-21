@@ -351,6 +351,7 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+
     private void guardarMail(String value) {
 
         if (!value.equals("")) {
