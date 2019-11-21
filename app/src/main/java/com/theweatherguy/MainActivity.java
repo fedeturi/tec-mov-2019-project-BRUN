@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_today);
         }
 
-
     }
 
     @Override

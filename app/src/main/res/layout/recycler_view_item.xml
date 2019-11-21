@@ -43,73 +43,84 @@
             android:text="@string/list_item_text_two"
             android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/list_item_max"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/list_item_subtitle"
-            android:text="@string/list_item_max"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:paddingLeft="8dp">
 
-        <TextView
-            android:id="@+id/list_item_max_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="6dp"
-            android:layout_toEndOf="@+id/list_item_max"
-            android:text="@string/list_item_max_value"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/list_item_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/list_item_subtitle"
+                android:text="@string/list_item_max"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/list_item_max_units"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="6dp"
-            android:layout_toEndOf="@+id/list_item_max_value"
-            android:text="@string/units"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/list_item_max_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/list_item_max"
+                android:text="@string/list_item_max_value"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/list_item_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/list_item_max_units"
-            android:text="@string/list_item_min"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/list_item_max_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/list_item_max_value"
+                android:text="@string/units"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/list_item_min_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="6dp"
-            android:layout_toEndOf="@+id/list_item_min"
-            android:text="@string/list_item_min_value"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/list_item_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/list_item_max_units"
+                android:text="@string/list_item_min"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/list_item_min_units"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="6dp"
-            android:layout_toEndOf="@+id/list_item_min_value"
-            android:text="@string/units"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/list_item_min_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/list_item_min"
+                android:text="@string/list_item_min_value"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/list_item_min_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/list_item_min_value"
+                android:text="@string/units"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 

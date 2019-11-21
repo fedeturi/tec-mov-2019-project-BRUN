@@ -26,6 +26,14 @@
             app:title="@string/units_preferences"
             app:useSimpleSummaryProvider="true" />
 
+        <ListPreference
+            app:defaultValue="1 Hour"
+            app:entries="@array/refresh_entries"
+            app:entryValues="@array/refresh_values"
+            app:key="refresh"
+            app:title="@string/refresh_preferences"
+            app:useSimpleSummaryProvider="true" />
+
         <SwitchPreferenceCompat
             app:key="animations"
             app:summaryOff="@string/show_animations_off"
