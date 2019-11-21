@@ -46,6 +46,7 @@ dependencies {
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
     implementation 'com.github.androdocs:Simple-HTTP-Request:v1.0'
+    implementation 'com.google.android.gms:play-services:12.0.1'
 
 }
 

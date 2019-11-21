@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
@@ -23,9 +22,10 @@
         app:lottie_fileName="weather_map_animation.json"/>
         -->
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <fragment
+        android:id="@+id/map_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/map_satelite"/>
+        class="com.google.android.gms.maps.SupportMapFragment" />
 
 </LinearLayout>
