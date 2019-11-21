@@ -73,8 +73,8 @@
     <string name="there_is_no_email_client">There is no email client installed.</string>
     <string name="your_profile">Your profile</string>
     <string name="usage_preferences">Usage preferences</string>
-    <string name="profile_name">Name</string>
-    <string name="profile_surname">Surname</string>
+    <string name="profile_name">Federico</string>
+    <string name="profile_surname">Brun</string>
     <string name="profile_mail">fedejbrun@gmail.com</string>
     <string name="units_preferences">Units</string>
     <string name="show_animations">Show animations</string>
@@ -87,6 +87,7 @@
     <string name="list_item_min_value">24</string>
     <string name="weather_description">Sunny</string>
     <string name="change">Change</string>
-    <string name="profile_username">Username</string>
+    <string name="profile_username">fedeturi</string>
     <string name="refresh_preferences">Refreshing period</string>
+    <string name="profile_change_dialog_title">Your new Username</string>
 </resources>
