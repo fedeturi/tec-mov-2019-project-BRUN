@@ -51,7 +51,7 @@
     <string name="send">Message Developing Team</string>
     <string name="nav_header_subtitle1">Weather Information, at the palm of your hands</string>
     <string name="nav_header_subtitle2">An app by Federico Brun</string>
-    <string name="today_weather_text_description">Partly Cloudy</string>
+    <string name="today_weather_text_description">Today\'s Weather for</string>
     <string name="today_temperature_textview">28º</string>
     <string name="list_item_day_text">Monday</string>
     <string name="list_item_text_two">Partly Cloudy</string>
@@ -90,4 +90,5 @@
     <string name="profile_username">fedeturi</string>
     <string name="refresh_preferences">Refreshing period</string>
     <string name="profile_change_dialog_title">Your new Username</string>
+    <string name="tody_weather_tv_city">Córdoba, Argentina</string>
 </resources>

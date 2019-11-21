@@ -66,8 +66,8 @@ public class ProfileFragment extends Fragment {
         if (users.size() > 0) {
             mUser = users.get(0);
             profileUsername.setText(mUser.getUserName());
-            profileName.setText(mUser.getUserName());
-            profileSurname.setText(mUser.getName());
+            profileName.setText(mUser.getName());
+            profileSurname.setText(mUser.getSurname());
             profileMail.setText(mUser.getMail());
         }
 
@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getActivity(), "Cambiar nombre", Toast.LENGTH_SHORT);
                 toast.show();
-                //changeName();
+                changeName();
             }
 
 
@@ -102,7 +102,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getActivity(), "Cambiar apellido", Toast.LENGTH_SHORT);
                 toast.show();
-                //changeSurname();
+                changeSurname();
             }
 
 
@@ -114,7 +114,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getActivity(), "Cambiar mail", Toast.LENGTH_SHORT);
                 toast.show();
-                //changeMail();
+                changeMail();
             }
 
 
@@ -122,6 +122,48 @@ public class ProfileFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void changeMail() {
+        // get prompts.xml view
+        LayoutInflater li = LayoutInflater.from(getContext());
+        View promptsView = li.inflate(R.layout.change_profile_dialog, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                getContext());
+
+        // set prompts.xml to alertdialog builder
+        alertDialogBuilder.setView(promptsView);
+
+        final EditText userInput = promptsView
+                .findViewById(R.id.editText_profile_change);
+
+
+        // set dialog message
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // get user input and set it to result
+                                // edit text
+                                profileMail.setText(userInput.getText());
+                                guardarMail(userInput.getText().toString());
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+
     }
 
     private void changeUserName() {
@@ -147,6 +189,7 @@ public class ProfileFragment extends Fragment {
                                 // get user input and set it to result
                                 // edit text
                                 profileUsername.setText(userInput.getText());
+                                guardarUsername(userInput.getText().toString());
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -163,6 +206,173 @@ public class ProfileFragment extends Fragment {
         alertDialog.show();
     }
 
+    private void changeName() {
+        // get prompts.xml view
+        LayoutInflater li = LayoutInflater.from(getContext());
+        View promptsView = li.inflate(R.layout.change_profile_dialog, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                getContext());
+
+        // set prompts.xml to alertdialog builder
+        alertDialogBuilder.setView(promptsView);
+
+        final EditText userInput = promptsView
+                .findViewById(R.id.editText_profile_change);
+
+
+        // set dialog message
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // get user input and set it to result
+                                // edit text
+                                profileName.setText(userInput.getText());
+                                guardarName(userInput.getText().toString());
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+    }
+
+    private void changeSurname() {
+        // get prompts.xml view
+        LayoutInflater li = LayoutInflater.from(getContext());
+        View promptsView = li.inflate(R.layout.change_profile_dialog, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                getContext());
+
+        // set prompts.xml to alertdialog builder
+        alertDialogBuilder.setView(promptsView);
+
+        final EditText userInput = promptsView
+                .findViewById(R.id.editText_profile_change);
+
+
+        // set dialog message
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // get user input and set it to result
+                                // edit text
+                                profileSurname.setText(userInput.getText());
+                                guardarSurnaName(userInput.getText().toString());
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+    }
+
+    private void guardarSurnaName(String value) {
+
+        if (!value.equals("")) {
+            if (mUser == null) {
+                mUser = new User();
+                mUser.setSurname(value);
+                mUserDBRepository.addUser(mUser);
+                Toast.makeText(getContext(), "Surname actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                mUser.setSurname(value);
+                mUserDBRepository.updateUser(mUser);
+                Toast.makeText(getContext(), "Surname actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getContext(), "Crear Usuario Primero",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void guardarUsername(String value) {
+
+        if (!value.equals("")) {
+            if (mUser == null) {
+                mUser = new User();
+                mUser.setUserName(value);
+                mUserDBRepository.addUser(mUser);
+                Toast.makeText(getContext(), "Username actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                mUser.setUserName(value);
+                mUserDBRepository.updateUser(mUser);
+                Toast.makeText(getContext(), "Username actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getContext(), "Crear Usuario Primero",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void guardarName(String value) {
+
+        if (!value.equals("")) {
+            if (mUser == null) {
+                mUser = new User();
+                mUser.setName(value);
+                mUserDBRepository.addUser(mUser);
+                Toast.makeText(getContext(), "Name actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                mUser.setName(value);
+                mUserDBRepository.updateUser(mUser);
+                Toast.makeText(getContext(), "Name actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getContext(), "Crear Usuario Primero",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void guardarMail(String value) {
+
+        if (!value.equals("")) {
+            if (mUser == null) {
+                mUser = new User();
+                mUser.setMail(value);
+                mUserDBRepository.addUser(mUser);
+                Toast.makeText(getContext(), "Mail actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                mUser.setMail(value);
+                mUserDBRepository.updateUser(mUser);
+                Toast.makeText(getContext(), "Mail actualizado correctamente",
+                        Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(getContext(), "Crear Usuario Primero",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -173,5 +383,6 @@ public class ProfileFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
 }
 

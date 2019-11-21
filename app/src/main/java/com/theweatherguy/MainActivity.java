@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,12 +18,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
+import com.theweatherguy.database.User;
+import com.theweatherguy.database.UserDBRepository;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    private UserDBRepository mUserDBRepository;
+    private User mUser;
+    private TextView userNameTextview;
 
     private void sendMail() {
 
@@ -68,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             navigationView.setCheckedItem(R.id.nav_today);
         }
+
 
     }
 
